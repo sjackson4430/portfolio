@@ -1,3 +1,9 @@
+---
+title: 'Docker 12 Point App'
+date: 2022-01-29 00:00:00
+description: This page is a demo that shows everything you can do inside portfolio and blog posts.
+featured_image: '/images/demo/demo-square.jpg'
+---
 Introduction
 In the modern era, software is commonly delivered as a service: called web apps, or software-as-a-service. The twelve-factor app is a methodology for building software-as-a-service apps that:
 
