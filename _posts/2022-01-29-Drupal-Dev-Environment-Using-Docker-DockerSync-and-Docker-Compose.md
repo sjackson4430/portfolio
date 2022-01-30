@@ -2,7 +2,7 @@
 title: 'Drupal Dev Environment Using Docker'
 date: 2022-01-29 00:00:00
 description: This page is a demo that shows everything you can do inside portfolio and blog posts.
-featured_image: '/images/DrupalLogo.png'
+featured_image: '/images/demo/drupalimage.jpg'
 ---
 One codebase, one deploy
 git https://github.com/sjackson4430/12factordemo.git
