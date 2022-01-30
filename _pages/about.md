@@ -1,6 +1,6 @@
 ---
 title: About me
-subtitle: Personal is the perfect theme for developers, designers and other creatives.
-description: Personal is the perfect theme for developers, designers and other creatives.
+subtitle: Steve Jackson - About Me
+description: Steve Jackson - Portfolio Website
 featured_image: /images/demo/about.jpg
 ---
