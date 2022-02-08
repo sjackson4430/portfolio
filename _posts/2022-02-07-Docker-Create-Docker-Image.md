@@ -14,3 +14,39 @@ Building python flask framework
 4. Install Python dependencies using pip
 5. Copy source code to /opt folder
 6. Run the web server using "flask" command
+
+Create the Dockerfile
+This file contains a list of Instructions, followed by an Argument, software, dependencies, update, also copying our code to /opt/source-code location, and entrypoint and always starts with a Base From Image and entrypoint allows us to run a command when the image will be run in a container
+
+From Ubuntu
+
+RUN apt get update
+RUN apt-get install python
+
+RUN pip install flask
+RUN pip install flask-mysql
+
+Copy . /opt/source-code
+
+ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
+
+
+
+Then run this command to create an image locally on your system
+docker build Dockerfile -t sjackson916/my-custom-app
+
+To make it avilable on the docker registry use thie push command
+docker push sjackson916/my-custom-app
+
+Docker has layered archetecture
+Layer 1 is the Base os
+Layer 2 Changes in apt packages
+Layer 3 Changes in pip packages
+Layer 4 Copy the Source Code over
+Layer 5 The entrypoint
+
+you will see each layer contains a different amount of space
+You will see if you run the docker history "Image Name" command
+When running Docker Build, it will re-run layers from cache so the build will be quicker and the layers you made changes to or failed will be rebuilt.
+
+So if your just updating the source code layer
