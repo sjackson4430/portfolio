@@ -18,17 +18,16 @@ Building python flask framework
 Create the Dockerfile
 This file contains a list of Instructions, followed by an Argument, software, dependencies, update, also copying our code to /opt/source-code location, and entrypoint and always starts with a Base From Image and entrypoint allows us to run a command when the image will be run in a container
 
-From Ubuntu
+$From Ubuntu
 
-RUN apt get update
-RUN apt-get install python
+$RUN apt get update
+$RUN apt-get install python
+$RUN pip install flask
+$RUN pip install flask-mysql
 
-RUN pip install flask
-RUN pip install flask-mysql
+$Copy . /opt/source-code
 
-Copy . /opt/source-code
-
-ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
+$ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 
 
 
@@ -50,3 +49,4 @@ You will see if you run the docker history "Image Name" command
 When running Docker Build, it will re-run layers from cache so the build will be quicker and the layers you made changes to or failed will be rebuilt.
 
 So if your just updating the source code layer
+6:37
