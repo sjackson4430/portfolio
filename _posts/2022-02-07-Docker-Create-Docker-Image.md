@@ -50,7 +50,7 @@ When running Docker Build, it will re-run layers from cache so the build will be
 
 So if your just updating the source code layer
 
-You can containerize everything, skype, spotify, curl, firefox, chrome
+You can containerize everything, skype, spotify, curl, firefox, chrome, etc...
 
 <h2>Creating a New Docker Image
 </h2>
