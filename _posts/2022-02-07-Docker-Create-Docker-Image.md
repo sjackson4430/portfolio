@@ -54,3 +54,10 @@ You can containerize everything, skype, spotify, curl, firefox, chrome, etc...
 
 <h2>Creating a New Docker Image
 </h2>
+Start with base os
+docker run -it ubuntu bash 
+
+
+<h3>Refrence
+</h3>
+https://kodekloud.com/topic/demo-creating-a-new-docker-image/
