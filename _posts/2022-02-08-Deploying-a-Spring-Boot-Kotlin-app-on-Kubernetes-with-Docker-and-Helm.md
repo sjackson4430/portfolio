@@ -17,19 +17,19 @@ Helm (3.4.0)
 Kubectl (matching kubernetes version)
 Spring-boot app setup
 On the spring initializr, create your app project. In this case we go with Gradle, Kotlin and Spring Boot 2.4.0 for Java 15 packaged in a JAR file. For the dependencies, let's select Spring Web so that we can initialize a Hello World REST API:
-
+<br>
 Alt Text
-
+<br>
 After generating it, you should have your project folder, which is the root to our repository.
-
+<br>
 Writing a hello-world REST API
 for a simple REST API, just create a controller folder on the same folder as your DemoSpringBootApplication.kt, create an Application.kt file inside and add this content:
-
+<br>
 package com.gateixeira.demospringboot.controller
-
+<br>
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
-
+<br>
 @RestController
 class Application {
     @GetMapping("/")
@@ -39,35 +39,35 @@ class Application {
 }
 Build and run app
 The generated zip file comes with an embedded Gradle executable, so in order to build our app and make sure that everything is working just do a ./gradlew build:
-
+<br>
 ~/code/demos/demo-spring-boot master > ./gradlew build
 Starting a Gradle Daemon (subsequent builds will be faster)
-
+<br>
 > Task :test
 2020-11-29 20:44:55.227  INFO 43582 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-
+<br>
 BUILD SUCCESSFUL in 8s
 7 actionable tasks: 3 executed, 4 up-to-date
 This process generates a jar file under build/libs. This is our executable. You can run it with java -jar build/libs/<your-app>. Your terminal will show the Spring banner and the following message:
-
+<br>
 DemoSpringBootApplicationKt : Started DemoSpringBootApplicationKt in 1.492 seconds (JVM running for 1.852)
-
+<br>
 Now if you go to localhost:8080 you see "Hello World".
-
+<br>
 Creating docker image
 Now let's write a very simple dockerfile to generate our image. We are going to use Open JDK's alpine version as our base image, with Java 15 to match what we chose above.
-
+<br>
 FROM openjdk:15-jdk-alpine
 ARG JAR_FILE=build/libs/*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 It simply copies the generated JAR file to the container as app.jar and uses this as entrypoint for a Java application.
-
+<br>
 Writing Helm chart
 Helm will be used to manage our application lifecycle inside Kubernetes. This will probably be the simplest chart possible but can easily be extended.
-
+<br>
 First, create a charts folder on your project's root. Then inside, create a Chart.yaml that specifies basic chart information:
-
+<br>
 apiVersion: v2
 name: helm
 description: "A Helm chart for our demo-spring-boot application"
@@ -140,36 +140,45 @@ Starting Minikube
 Our Kubernetes will be running locally with Minikube:
 
 ~/code/demos/demo-spring-boot master > minikube start --memory 2048 --cpus 2 --disk-size 10g --kubernetes-version v1.18.8
+<br>
 😄  minikube v1.15.1 on Darwin 10.15.6
+<br>
 ❗  Both driver=docker and vm-driver=virtualbox have been set.
 
     Since vm-driver is deprecated, minikube will default to driver=docker.
 
     If vm-driver is set in the global config, please run "minikube config unset vm-driver" to resolve this warning.
-
+<br>
 ✨  Using the docker driver based on user configuration
+<br>
 👍  Starting control plane node minikube in cluster minikube
+<br>
 🔥  Creating docker container (CPUs=2, Memory=2048MB) ...
+<br>
 🐳  Preparing Kubernetes v1.18.8 on Docker 19.03.13 ...
+<br>
 🔎  Verifying Kubernetes components...
+<br>
 🌟  Enabled addons: storage-provisioner, default-storageclass
-
+<br>
 ❗  /usr/local/bin/kubectl is version 1.16.7, which may have incompatibilites with Kubernetes 1.18.8.
     ▪ Want kubectl v1.18.8? Try 'minikube kubectl -- get pods -A'
+<br>
 🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
 Now our app should be ready to be deployed on Kubernetes. First, let's build the docker image.
 
 Start by switching the docker environment to use Minikube's daemon, otherwise Minikube can't find the image:
-
+<br>
 eval $(minikube docker-env)
-
+<br>
 For those running on Windows, the powershell equivalent is
-
+<br>
 minikube docker-env | Invoke-Expression
-
+<br>
 Then build the image with docker build -t <image_name>:<image_tag> .
-
-~/code/demos/demo-spring-boot master > docker build -t gateixeira/demo-spring-boot:latest .                                                                                     4s
+<br>
+~/code/demos/demo-spring-boot master > docker build -t gateixeira/demo-spring-boot:latest .  
+<br>                                                                                   4s
 Sending build context to Docker daemon  23.16MB
 Step 1/4 : FROM openjdk:15-jdk-alpine
  ---> f02adfce91a2
@@ -182,12 +191,18 @@ Step 4/4 : ENTRYPOINT ["java", "-jar", "/app.jar"]
  ---> Running in 0ed363cc6d8b
 Removing intermediate container 0ed363cc6d8b
  ---> 0033b968a8a9
+<br>
 Successfully built 0033b968a8a9
 Successfully tagged gateixeira/demo-spring-boot:latest
+<br>
 To install your application on Minikube, run:
 helm upgrade --install demo-spring-boot charts --values charts/values.yaml. Where charts is your charts folder.
+<br>
+~/code/demos/demo-spring-boot master > helm upgrade --install demo-spring-boot charts --values charts/values.yaml                                               
+<br>
+INT kube minikube
 
-~/code/demos/demo-spring-boot master > helm upgrade --install demo-spring-boot charts --values charts/values.yaml                                               INT kube minikube
+<br>
 WARNING: "kubernetes-charts.storage.googleapis.com" is deprecated for "stable" and will be deleted Nov. 13, 2020.
 WARNING: You should switch to "https://charts.helm.sh/stable"
 Release "demo-spring-boot" does not exist. Installing it now.
@@ -198,19 +213,17 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 You can check your application is running with kubectl get pods:
-
+<br>
 ~/code/demos/demo-spring-boot master !1 > kubectl get pods                                                                                                          kube minikube
 NAME                               READY   STATUS    RESTARTS   AGE
 demo-spring-boot-684cc98cc-zxgfv   1/1     Running   0          101s
 With your app running, Minikube can tunnel your application and provide a URL to access it:
 
 ~/code/demos/demo-spring-boot master !1 > minikube service demo-spring-boot --url
+<br>
 🏃  Starting tunnel for service demo-spring-boot.
-|-----------|------------------|-------------|------------------------|
-| NAMESPACE |       NAME       | TARGET PORT |          URL           |
-|-----------|------------------|-------------|------------------------|
-| default   | demo-spring-boot |             | http://127.0.0.1:61460 |
-|-----------|------------------|-------------|------------------------|
+
+
 http://127.0.0.1:61460
 Congratulations! 😄
 
