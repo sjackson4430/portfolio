@@ -49,4 +49,8 @@ You will see if you run the docker history "Image Name" command
 When running Docker Build, it will re-run layers from cache so the build will be quicker and the layers you made changes to or failed will be rebuilt.
 
 So if your just updating the source code layer
-6:37
+
+You can containerize everything, skype, spotify, curl, firefox, chrome
+
+<h2>Creating a New Docker Image
+</h2>
