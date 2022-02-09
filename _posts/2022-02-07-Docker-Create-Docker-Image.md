@@ -48,7 +48,7 @@ you will see each layer contains a different amount of space
 You will see if you run the docker history "Image Name" command
 When running Docker Build, it will re-run layers from cache so the build will be quicker and the layers you made changes to or failed will be rebuilt.
 
-So if your just updating the source code layer
+So if your just updating the source code layer, just that layer of the build will be rebuilt and the rest will be cached which makes deployment of the docker image much faster.
 
 You can containerize everything, skype, spotify, curl, firefox, chrome, etc...
 
