@@ -1,5 +1,5 @@
 ---
-title: 'Angular'
+title: 'Angular Via Caprover'
 subtitle: 'Angular Via Caprover'
 date: 2022-02-09 18:18:00
 description: This is my Angular Project.
