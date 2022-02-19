@@ -43,7 +43,7 @@ The generated zip file comes with an embedded Gradle executable, so in order to 
 ~/code/demos/demo-spring-boot master > ./gradlew build
 Starting a Gradle Daemon (subsequent builds will be faster)
 <br>
-Task :test
+> Task :test
 2020-11-29 20:44:55.227  INFO 43582 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 <br>
 BUILD SUCCESSFUL in 8s
