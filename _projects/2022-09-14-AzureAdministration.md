@@ -6,5 +6,6 @@ description: We will be using azures admin portal for this project.
 featured_image: '/images/demo/AZ.jpg'
 ---
 # Azure
+
+![]( /images/demo/azure.jpg) 
 Welcome to my Azure project page!
-![Azure][{{site.url}}/images/demo/Azure.JPG]
