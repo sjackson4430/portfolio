@@ -6,5 +6,5 @@ description: This is my Microsoft Powerapps Project.
 featured_image: '/images/demo/MSpowerapp.jpg'
 ---
 # Microsoft Powerapps
-![Sharepoint][{{site.url}}/images/demo/sharepoint.jpg]
-In this project I will be shocasing some of this applications you can create with Microsoft Powerapps
+In this project I will be shocasing some of this applcations you can create with Microsoft Powerapps
+![]( /images/demo/sharepoint.jpg) 
