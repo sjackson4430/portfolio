@@ -6,6 +6,5 @@ description: We will be using azures admin portal for this project.
 featured_image: '/images/demo/AZ.jpg'
 ---
 # Azure
-
-`For this MS Powerapps project I will be utilizing Azure admin portal`
-![]((https://sjackson4430.github.io/portfolio/images/demo/Azure.jpg))
+Welcome to my Azure project page!
+![Azure][{{site.url}}/images/demo/Azure.JPG]
