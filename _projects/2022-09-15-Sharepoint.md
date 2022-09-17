@@ -5,7 +5,10 @@ date: 2022-02-09 18:18:00
 description: This is my Microsoft Sharepoint Project.
 featured_image: '/images/demo/SP2.jpg'
 ---
-[My Microsoft Sharepoint App](https://sjackson4430.github.io/portfolio/website/index.html)
+# Microsoft Sharepoint
+
+`Im running Sharepoint to see how it integrates with Microsoft Powerapps.  I created a site that will be dedicated to applications I will be sharing out.`
+![]((https://sjackson4430.github.io/portfolio/images/demo/SP2.jpg))
 
 
 
