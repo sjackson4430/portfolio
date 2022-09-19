@@ -19,7 +19,7 @@ that lets pro developers programmatically interact with data and
 metadata, apply business logic, create custom connectors, and integrate
 with external data.
 
-##With Power Apps, you can: 
+## With Power Apps, you can: 
 -	Build an app quickly by using the skills
 that you already have. 
 -	Connect to the cloud services and data sources
