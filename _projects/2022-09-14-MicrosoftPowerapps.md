@@ -8,12 +8,7 @@ featured_image: '/images/demo/MSpowerapp.jpg'
 # Microsoft Powerapps
 In this project I will be shocasing some of this applcations you can create with Microsoft Powerapps
 ![]( /images/demo/sharepoint.jpg) 
-Introduction to Power Apps Power Apps is a suite of apps, services,
-connectors, and a data platform that provides you with an opportunity to
-build custom apps for your business needs. By using Power Apps, you can
-quickly build custom business apps that connect to your business data
-that is stored either in the underlying data platform (Microsoft
-Dataverse) or in various online and on-premises data sources
+Power Apps is a suite of apps, services,connectors, and a data platform that provides you with an opportunity to build custom apps for your business needs. By using Power Apps, you can quickly build custom business apps that connect to your business data that is stored either in the underlying data platform (Microsoft Dataverse) or in various online and on-premises data sources
 (SharePoint, Excel, Office 365, Dynamics 365, SQL Server, and so on).
 Apps that are built by using Power Apps provide rich business logic and
 workflow capabilities to transform your manual business processes to
@@ -24,12 +19,12 @@ that lets pro developers programmatically interact with data and
 metadata, apply business logic, create custom connectors, and integrate
 with external data.
 
-With Power Apps, you can: 
-• Build an app quickly by using the skills
+##With Power Apps, you can: 
+-	Build an app quickly by using the skills
 that you already have. 
-• Connect to the cloud services and data sources
+-	Connect to the cloud services and data sources
 that you're already using. 
-• Share your apps instantly so that coworkers
+-	Share your apps instantly so that coworkers
 can use them on their phones and tablets.
 
 Power Automate Power Automate brings automation to your business. This
