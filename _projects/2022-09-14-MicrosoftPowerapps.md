@@ -24,9 +24,12 @@ that lets pro developers programmatically interact with data and
 metadata, apply business logic, create custom connectors, and integrate
 with external data.
 
-With Power Apps, you can: • Build an app quickly by using the skills
-that you already have. • Connect to the cloud services and data sources
-that you're already using. • Share your apps instantly so that coworkers
+With Power Apps, you can: 
+• Build an app quickly by using the skills
+that you already have. 
+• Connect to the cloud services and data sources
+that you're already using. 
+• Share your apps instantly so that coworkers
 can use them on their phones and tablets.
 
 Power Automate Power Automate brings automation to your business. This
