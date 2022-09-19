@@ -8,7 +8,7 @@ featured_image: '/images/demo/MSpowerapp.jpg'
 # Microsoft Powerapps
 ## In this project I will be showcasing some of the applcations you can create with Microsoft Powerapps
 
-Power Apps is a suite of apps, services,connectors, and a data platform that provides you with an opportunity to build custom apps for your business needs. By using Power Apps, you can quickly build custom business apps that connect to your business data that is stored either in the underlying data platform (Microsoft Dataverse) or in various online and on-premises data sources
+*Power Apps* is a suite of apps, services,connectors, and a data platform that provides you with an opportunity to build custom apps for your business needs. By using Power Apps, you can quickly build custom business apps that connect to your business data that is stored either in the underlying data platform (Microsoft Dataverse) or in various online and on-premises data sources
 (SharePoint, Excel, Office 365, Dynamics 365, SQL Server, and so on).
 Apps that are built by using Power Apps provide rich business logic and
 workflow capabilities to transform your manual business processes to
@@ -27,7 +27,7 @@ that you're already using.
 -	Share your apps instantly so that coworkers
 can use them on their phones and tablets.
 
-Power Automate Power Automate brings automation to your business. This
+**Power Automate** brings automation to your business. This
 can be traditional workflows via flow, Robotic Process Automation (RPA)
 for automating legacy systems via desktop flow, or business process
 automation via Business Process Flows. Each of these capabilities
@@ -42,7 +42,7 @@ flow. You can configure any control in the app to start the flow, which
 continues to run even if you close Power Apps. Below is an example using
 Power Automate to send a flow:
 
-Identify flows in your solution Now that you have a general overview of
+Identify **flows** in your solution Now that you have a general overview of
 Power Automate, how do you determine if the solution you're building
 requires a Flow? There are many simple functions Power Apps can do, like
 sending an email when a button is pressed in your application. This
@@ -62,7 +62,7 @@ is due that day and then send an email with a link to your Power Apps
 inspection form? These are great uses of Power Automate to transform
 your app from a point solution to a fully featured business solution.
 
-Power BI Power BI is an analytics tool within Microsoft Power Platform
+**Power BI** is an analytics tool within Microsoft Power Platform
 suite. Power BI connects data from multiple sources and transforms the
 data into graphical visualizations to gain insights. It allows business
 users to utilize many different visualizations to build comprehensive
@@ -81,7 +81,7 @@ Power BI tile in a Power Apps solution, you are able to bring valuable
 visualizations into the app to allow the user to consume that data
 within the context of the app.
 
-Embed a Power Apps app in a Power BI dashboard Another integration
+*Embed a Power Apps app in a Power BI* dashboard Another integration
 between these two applications, is to embed a Power Apps app in your
 Power BI report. This allows the user to act on data while never leaving
 the dashboard resulting in a better user experience. Consider an
